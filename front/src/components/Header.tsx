@@ -9,7 +9,6 @@ export default function Header() {
 
       <nav className="site-header__nav" aria-label="Основная навигация">
         <a href="/">Главная</a>
-        <a href="/projects">Проекты</a>
         <a href="/portfolio">Портфолио</a>
         <a href="#contacts">Контакты</a>
       </nav>

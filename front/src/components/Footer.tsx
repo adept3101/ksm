@@ -7,9 +7,7 @@ export default function Footer() {
 
       <div>
         <h3>Навигация</h3>
-        <a href="/projects">Проекты</a>
         <a href="/portfolio">Портфолио</a>
-        <a href="/contacts">Контакты</a>
       </div>
 
       <div>
@@ -22,7 +20,7 @@ export default function Footer() {
       </div>
 
       <p className="site-footer__copyright">
-        © {new Date().getFullYear()} КСМ
+        © {new Date().getFullYear()} КонтурСтройМонтаж
       </p>
     </footer>
   );
