@@ -11,7 +11,7 @@ export default function Header() {
         <a href="/">Главная</a>
         <a href="/projects">Проекты</a>
         <a href="/portfolio">Портфолио</a>
-        <a href="/contacts">Контакты</a>
+        <a href="#contacts">Контакты</a>
       </nav>
     </header>
   );

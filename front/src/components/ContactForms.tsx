@@ -12,18 +12,6 @@ export default function ContactForms() {
       </div>
 
       <div className="contact-grid">
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <h3>Заказать звонок</h3>
-          <label>
-            Ваше имя
-            <input name="name" placeholder="Как к вам обращаться?" required />
-          </label>
-          <label>
-            Телефон
-            <input name="phone" type="tel" placeholder="+7 ..." required />
-          </label>
-          <button type="submit">Заказать звонок</button>
-        </form>
 
         <form className="contact-form" onSubmit={handleSubmit}>
           <h3>Написать нам</h3>
@@ -44,7 +32,9 @@ export default function ContactForms() {
             Сообщение
             <textarea name="message" placeholder="Расскажите о задаче" required />
           </label>
-          <button type="submit">Отправить сообщение</button>
+
+          <button type="submit" className="btn-send">Отправить сообщение</button>
+
         </form>
       </div>
     </section>
