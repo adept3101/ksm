@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import { config } from './config.ts';
+import { config } from './config';
 
 const transporter = nodemailer.createTransport({
   host: config.smtp.host,

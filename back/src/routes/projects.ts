@@ -4,10 +4,10 @@ import { randomUUID } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { z } from 'zod';
-import { requireAdmin } from '../middleware/auth.ts';
-import { config } from '../services/config.ts';
+import { requireAdmin } from '../middleware/auth';
+import { config } from '../services/config';
 import type { ResultSetHeader } from 'mysql2/promise';
-import { pool, type Project } from '../services/db.ts';
+import { pool, type Project } from '../services/db';
 
 const EXT_BY_MIME: Record<string, string> = {
   'image/jpeg': '.jpg',

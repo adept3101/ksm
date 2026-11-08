@@ -3,7 +3,7 @@ import rateLimit from 'express-rate-limit';
 import { createHash, timingSafeEqual } from 'node:crypto';
 import jwt from 'jsonwebtoken';
 import { z } from 'zod';
-import { config } from '../services/config.ts';
+import { config } from '../services/config';
 
 const schema = z.object({ password: z.string().min(1).max(200) });
 

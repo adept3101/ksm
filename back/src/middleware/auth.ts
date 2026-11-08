@@ -1,6 +1,6 @@
 import type { NextFunction, Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
-import { config } from '../services/config.ts';
+import { config } from '../services/config';
 
 export function requireAdmin(req: Request, res: Response, next: NextFunction) {
   const header = req.headers.authorization ?? '';

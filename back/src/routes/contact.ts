@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import rateLimit from 'express-rate-limit';
 import { z } from 'zod';
-import { sendContactMail } from '../services/mailer.ts';
+import { sendContactMail } from '../services/mailer';
 
 const schema = z.object({
   name: z.string().trim().min(1, 'Укажите имя').max(100),

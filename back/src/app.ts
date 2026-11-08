@@ -2,9 +2,10 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import { config } from './services/config.ts';
-import { verifyMailer } from './services/mailer.ts';
-import { contactRouter } from './routes/contact.ts'
+import { config } from './services/config';
+import { verifyMailer } from './services/mailer';
+import { contactRouter } from './routes/contact'
+import { authRouter } from './routes/auth';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
@@ -30,6 +31,10 @@ app.get('/api/health', (_req, res) => {
 
 app.use('/api/contact', contactRouter);
 app.use((_req, res) => res.status(404).json({ ok: false, error: 'Not found' }));
+
+app.use('/api/auth', authRouter);
+app.use('/api/contact', contactRouter);
+app.use('/api/projects', projectsRouter);
 
 app.listen(PORT, () => {
   console.log(`Backend running on http://localhost:${PORT}`);
